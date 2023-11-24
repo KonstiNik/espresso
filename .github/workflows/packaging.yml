@@ -3,8 +3,8 @@ name: Build packages
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 2 * * *'
+  # schedule:
+  #   - cron: '0 2 * * *'
 
 jobs:
   ubuntupackage:
