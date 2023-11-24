@@ -30,8 +30,8 @@ jobs:
 
     #   - name: Publish PPA
     #     uses: ./.github/actions/publish-ppa-package
-      - name: publish-ppa-package
-        uses: yuezk/publish-ppa-package@v1.0.0
+      - name: Publish PPA
+        uses: yuezk/publish-ppa-package@main
         with:
           repository: 'ppa:knikolaou/espressoppa'
           gpg_private_key: ${{ secrets.ESPRESSO_PPA_PRIVATE_KEY }}
