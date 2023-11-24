@@ -3,8 +3,8 @@ name: Build packages
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 2 * * *'
+  # schedule:
+  #   - cron: '0 2 * * *'
 
 jobs:
   ubuntupackage:
@@ -30,6 +30,7 @@ jobs:
 
       - name: Publish PPA
         uses: ./.github/actions/publish-ppa-package
+    #     uses: yuezk/publish-ppa-package@main
         with:
           repository: 'ppa:knikolaou/espressoppa'
           gpg_private_key: ${{ secrets.ESPRESSO_PPA_PRIVATE_KEY }}
